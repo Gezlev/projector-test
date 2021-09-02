@@ -2,7 +2,7 @@
   "name": "projector-test",
   "version": "1.0.0",
   "description": "",
-  "private": true,
+  "private": false,
   "scripts": {
     "styles": "gulp dev",
     "dev": "webpack --mode development",

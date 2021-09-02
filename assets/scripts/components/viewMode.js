@@ -36,7 +36,7 @@ CreateBtn.addEventListener('click', () => {
     ViewMode('add');
 }, {passive:true});
 
-note.addEventListener('click', evt => {
+document.querySelector('#note').addEventListener('click', evt => {
     let target = evt.target;
     let link = target.closest('a');
     if (link) {
