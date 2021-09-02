@@ -1,0 +1,51 @@
+.list {
+  position: relative;
+  &:before {
+    content: 'No notes yet :(';
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    left: 0;
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    color: #c3c3c3;
+    background: #F5F5F5;
+    border-radius: .375rem;
+  }
+
+  &-item {
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
+    border: 1px solid gainsboro;
+    border-radius: .25rem;
+    background-color: #FFF;
+    transition: background-color .3s ease-out;
+
+    &.active,
+    &:hover {
+      background-color: lighten(lightblue, 10%);
+      border-color: lighten(lightblue, 10%);
+    }
+
+    &__title {}
+
+    &__content {
+      height: 1.5rem;
+      margin-bottom: .75rem;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .btn {}
+  }
+  &-item + &-item {
+    margin-top: 1.25rem;
+  }
+}

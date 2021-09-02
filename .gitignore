@@ -1,0 +1,7 @@
+/node_modules/
+/.idea/.gitignore
+/.idea/modules.xml
+/package-lock.json
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/projector-test.iml
+/.idea/vcs.xml

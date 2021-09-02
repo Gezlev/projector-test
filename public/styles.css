@@ -1,0 +1,283 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 150%;
+  color: #444;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.title,
+.subtitle {
+  font-weight: 500;
+  color: black;
+}
+
+.title {
+  line-height: 1;
+  font-size: 2rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background-color: #FFF;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .wrapper {
+    display: flex;
+  }
+}
+
+.container {
+  position: relative;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .container {
+    flex: 0 0 50%;
+    width: 50%;
+    padding: 3rem 2rem;
+  }
+}
+
+.content {
+  clear: both;
+}
+.content p {
+  margin: 0 0 1rem;
+}
+.content img {
+  display: block;
+  height: auto;
+  width: auto;
+  max-width: calc(100% + .5rem);
+  margin: 1rem -0.25rem;
+}
+
+.title {
+  float: left;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.title + .btn {
+  float: right;
+  margin: 0 0 2rem;
+}
+
+.subtitle {
+  padding: 0;
+  margin: 0 0 0.5rem;
+}
+
+#form,
+#note {
+  opacity: 0;
+  transform: scale3d(0, 1, 1);
+  pointer-events: none;
+  transition: opacity 0.1s ease-out, transform 0.1s ease-out;
+  transform-origin: 0 0;
+}
+#form.visible,
+#note.visible {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  pointer-events: unset;
+  transition: opacity 0.2s ease-out 0.2s, transform 0.2s ease-out 0.15s;
+}
+
+#form {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  background-color: #FFF;
+}
+@media (min-width: 768px) {
+  #form {
+    padding: 3rem 2rem;
+  }
+}
+
+#note {
+  min-height: 400px;
+}
+
+.fieldset {
+  position: relative;
+  padding-bottom: 1.75rem;
+}
+.fieldset label,
+.fieldset textarea {
+  font-size: 0.875rem;
+}
+.fieldset input,
+.fieldset textarea {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #444;
+  border-radius: 0.25rem;
+  border: 1px solid dodgerblue;
+  outline: none;
+}
+.fieldset label {
+  display: block;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  color: black;
+}
+.fieldset input {
+  height: 1.75rem;
+  font-size: 0.75rem;
+}
+.fieldset textarea {
+  min-height: 7rem;
+}
+.fieldset .msg {
+  position: absolute;
+  left: 0;
+  bottom: 0.5rem;
+  height: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(0.375rem, 0, 0);
+}
+.fieldset .msg.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 2rem;
+  margin: 0 1rem 0 0;
+  padding: 0.475rem 0.6rem 0.5rem;
+  line-height: 1;
+  font-size: 0.875rem;
+  font-weight: 300;
+  vertical-align: top;
+  white-space: nowrap;
+  color: dodgerblue;
+  border-radius: 0.25rem;
+  border: 1px solid dodgerblue;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.btn:hover {
+  background-color: #e0f0ff;
+}
+.btn.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.btn_blue, .btn_red {
+  color: #FFF;
+}
+.btn_blue:hover, .btn_red:hover {
+  color: #FFF;
+}
+.btn_blue.disabled, .btn_red.disabled {
+  border-color: gainsboro;
+  background-color: gainsboro;
+}
+.btn_blue {
+  background-color: dodgerblue;
+}
+.btn_blue:hover {
+  border-color: #006ad1;
+  background-color: #006ad1;
+}
+.btn_red {
+  border-color: crimson;
+  background-color: crimson;
+}
+.btn_red:hover {
+  border-color: #9f0e2b;
+  background-color: #9f0e2b;
+}
+
+.list {
+  position: relative;
+}
+.list:before {
+  content: "No notes yet :(";
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  color: #c3c3c3;
+  background: #F5F5F5;
+  border-radius: 0.375rem;
+}
+.list-item {
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+  border: 1px solid gainsboro;
+  border-radius: 0.25rem;
+  background-color: #FFF;
+  transition: background-color 0.3s ease-out;
+}
+.list-item.active, .list-item:hover {
+  background-color: #d4ebf2;
+  border-color: #d4ebf2;
+}
+.list-item__content {
+  height: 1.5rem;
+  margin-bottom: 0.75rem;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.list-item + .list-item {
+  margin-top: 1.25rem;
+}

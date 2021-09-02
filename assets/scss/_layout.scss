@@ -1,0 +1,95 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+body {
+  background-color: #FFF;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+.container {
+  position: relative;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    flex: 0 0 50%;
+    width: 50%;
+    padding: 3rem 2rem;
+  }
+}
+.content {
+  clear: both;
+  p {
+    margin: 0 0 1rem;
+  }
+  img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-width: calc(100% + .5rem);
+    margin: 1rem -.25rem;
+  }
+}
+
+.title {
+  float: left;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+.title + .btn {
+  float: right;
+  margin: 0 0 2rem;
+}
+
+.subtitle {
+  padding: 0;
+  margin: 0 0 .5rem;
+}
+
+
+#form,
+#note {
+  opacity: 0;
+  transform: scale3d(0,1,1);
+  pointer-events: none;
+  transition: opacity .1s ease-out, transform .1s ease-out;
+  transform-origin: 0 0;
+
+  &.visible {
+    opacity: 1;
+    transform: scale3d(1,1,1);
+    pointer-events: unset;
+    transition: opacity .2s ease-out .2s, transform .2s ease-out .15s;
+  }
+}
+
+#form {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  background-color: #FFF;
+
+  @media (min-width: 768px) {
+    padding: 3rem 2rem;
+  }
+}
+
+#note {
+  min-height: 400px;
+}

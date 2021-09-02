@@ -1,0 +1,123 @@
+.formbox {}
+
+.fieldset {
+  position: relative;
+  padding-bottom: 1.75rem;
+
+  label,
+  textarea {
+    font-size: .875rem;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0;
+    padding: .25rem .5rem;
+    box-sizing: border-box;
+    font-weight: 300;
+    color: #444;
+    border-radius: .25rem;
+    border: 1px solid dodgerblue;
+    outline: none;
+  }
+
+  label {
+    display: block;
+    margin: 0 0 .5rem;
+    padding: 0;
+    color: black;
+  }
+
+  input {
+    height: 1.75rem;
+    font-size: .75rem;
+  }
+
+  textarea {
+    min-height: 7rem;
+  }
+
+  .msg {
+    position: absolute;
+    left: 0;
+    bottom: .5rem;
+    height: 1rem;
+    max-width: 100%;
+    overflow: hidden;
+    font-size: .75rem;
+    line-height: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(.375rem, 0, 0);
+
+    &.visible {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 2rem;
+  margin: 0 1rem 0 0;
+  padding:  .475rem .6rem .5rem;
+  line-height: 1;
+  font-size: .875rem;
+  font-weight: 300;
+  vertical-align: top;
+  white-space: nowrap;
+  color: dodgerblue;
+  border-radius: .25rem;
+  border: 1px solid dodgerblue;
+  cursor: pointer;
+  transition: all .3s ease-out;
+
+  &:hover {
+    background-color: lighten(dodgerblue, 38%);
+  }
+
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &_blue,
+  &_red {
+    color: #FFF;
+
+    &:hover {
+      color: #FFF;
+    }
+
+    &.disabled {
+      border-color: gainsboro;
+      background-color: gainsboro;
+    }
+  }
+
+  &_blue {
+    background-color: dodgerblue;
+
+    &:hover {
+      border-color: darken(dodgerblue, 15%);
+      background-color: darken(dodgerblue, 15%);
+    }
+  }
+
+  &_red {
+    border-color: crimson;
+    background-color: crimson;
+
+    &:hover {
+      border-color: darken(crimson, 13%);
+      background-color: darken(crimson, 13%);
+    }
+  }
+}

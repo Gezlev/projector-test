@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Projector test</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+	<main class="wrapper">
+		<div class="container">
+			<div id="form" class="visible">
+				<h2 class="title">Create new note</h2>
+				<div class="content">
+					<div class="formbox">
+						<div class="fieldset">
+							<label for="title">Title</label>
+							<input type="text" name="title" id="title" placeholder="Placeholder" />
+							<div class="msg"></div>
+						</div>
+						<div class="fieldset">
+							<label for="content">Content</label>
+							<textarea name="content" id="content" placeholder="Placeholder"></textarea>
+							<div class="msg"></div>
+						</div>
+						<div class="btn btn_blue" id="saveForm">Create</div>
+						<div class="btn" id="cancelForm">Cancel</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="note">
+				<h2 class="title"></h2>
+				<div class="content"></div>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<h2 class="title">Note list</h2>
+			<div class="btn btn_blue" id="createBtn">Create note</div>
+
+			<div class="content">
+				<div class="list" id="list"></div>
+			</div>
+
+		</div>
+	</main>
+	<script src="public/app.min.js"></script>
+</body>
+</html>
